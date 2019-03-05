@@ -13,20 +13,20 @@ export class EmployeeComponent {
         { Name: "Anmol", age: "22", height: "165cm" },
         { Name: "Kamta", age: "58", height: "168cm" }]
 
-    checkAge(name : string) {
-       if(name === 'laxmi'){
-           console.log("28")
-          return "28"
-       }
-    } 
-    
-    fullname : string = "Laxmi";
+    checkAge(name: string) {
+        if (name === 'laxmi') {
+            console.log("28")
+            return "28"
+        }
+    }
+
+    fullname: string = "Laxmi";
 
     constructor() {
         /* alert("employee component"); */
     }
 
-    onSubmit(form){
-     alert("my form value  "+form);
+    onSubmit(form) {
+        alert("my form value  " + form);
     }
 }

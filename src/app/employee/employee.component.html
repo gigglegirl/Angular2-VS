@@ -5,12 +5,12 @@
         </tr>
     </tbody>
 </table>
-<form #f="ngForm">
-    <input type="text" [(ngModel)]="fullname">
-    <input type="text" [(ngModel)]="email">
-    <input type="text" [(ngModel)]="phone_no">
-    <input type="text" [(ngModel)]="address">
-    <button type="submit" (click)="onSubmit(f)"></button>
+<form #f="ngForm" (click)="onSubmit(f)">
+    <input type="text" [(ngModel)]="fullname" name="fullname">
+    <input type="text" [(ngModel)]="email" name="email">
+    <input type="text" [(ngModel)]="phone_no" name="phone_no">
+    <input type="text" [(ngModel)]="address" name="address">
+    <button type="submit">submit</button>
 </form>
 <br>
 Entered Name is {{fullname}}
