@@ -1,20 +1,16 @@
 <table>
-    <tbody>
-      <tr>
-        <td>FirstName</td>
-        <td>{{firstName}}</td>
-      </tr>
-      <tr>
-          <td>Last Name</td>
-          <td>{{lastName}}</td>
-      </tr>
-      <tr>
-          <td>Gender</td>
-          <td>{{gender}}</td>
-      </tr>
-      <tr>
-          <td>Age</td>
-          <td>{{age}}</td>
-      </tr>
+    <tbody *ngFor="let data of employeeList">
+        <tr>
+            <td>{{data.Name}}</td><button (click)="checkAge(data.Name)"> Check Age </button>
+        </tr>
     </tbody>
-  </table>
+</table>
+<form #f="ngForm">
+    <input type="text" [(ngModel)]="fullname">
+    <input type="text" [(ngModel)]="email">
+    <input type="text" [(ngModel)]="phone_no">
+    <input type="text" [(ngModel)]="address">
+    <button type="submit" (click)="onSubmit(f)"></button>
+</form>
+<br>
+Entered Name is {{fullname}}
