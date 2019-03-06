@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { interfaceEmployee } from './employeeInterface'
 import { EmployeeService } from './employee.service'
@@ -10,15 +10,17 @@ import { EmployeeService } from './employee.service'
     providers:[EmployeeService]
 })
 
-export class EmployeeComponent {
+export class EmployeeComponent implements OnInit{
 
     employeeList : interfaceEmployee;
     employeeCountSelectedRadioButton :String = 'all';
 
     constructor(private _employeeService:EmployeeService) {
+        
+    }
+    ngOnInit(){
         this.employeeList= this._employeeService.getEmployees();
     }
-    
     getTotalEmployeeCount(){
         return this.employeeList.length;
     }
