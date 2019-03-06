@@ -1,32 +1,42 @@
 import { Component } from '@angular/core';
 import { checkNoChanges } from '@angular/core/src/render3/instructions';
+import { NgForm } from '@angular/forms';
 
 @Component({
     selector: 'my-employee',
-    templateUrl: 'employee.component.html'
+    templateUrl: 'employee.component.html',
+    styleUrls : ['employee.component.less']
 })
 
 export class EmployeeComponent {
-    employeeList: any[] =
-        [{ Name: "laxmi", age: "28", height: '160cm' },
-        { Name: "Ashish", age: "30", height: "170cm" },
-        { Name: "Anmol", age: "22", height: "165cm" },
-        { Name: "Kamta", age: "58", height: "168cm" }]
-
-    checkAge(name: string) {
-        if (name === 'laxmi') {
-            console.log("28")
-            return "28"
-        }
-    }
-
     fullname: string = "Laxmi";
+    employeeList : any
+    employeeCountSelectedRadioButton :String = 'all';
 
     constructor() {
-        /* alert("employee component"); */
+        this.employeeList =
+        [{ Name: "laxmi", age: "28", height: '160cm' ,gender : 'female'},
+        { Name: "Ashish", age: "30", height: "170cm" ,gender : 'male'},
+        { Name: "Anmol", age: "22", height: "165cm",gender : 'male' },
+        { Name: "Kamta", age: "58", height: "168cm" ,gender : 'male'}]
+    }
+    
+    getTotalEmployeeCount():number{
+        return this.employeeList.length
     }
 
-    onSubmit(form) {
+    getTotalMaleEmployeeCount():number{
+        return this.employeeList.filter(e => e.gender==='male').length
+    }
+    getTotalFemaleEmployeeCount():number{
+        return this.employeeList.filter(e => e.gender==='female').length
+    }
+    
+    onEmployeeCountRadioSelectedChange(selectedValue:String):void{
+      this.employeeCountSelectedRadioButton = selectedValue;
+    }
+
+    onSubmit(form:NgForm) {
         alert("my form value  " + form);
     }
 }
