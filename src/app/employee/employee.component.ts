@@ -1,28 +1,26 @@
 import { Component } from '@angular/core';
-import { checkNoChanges } from '@angular/core/src/render3/instructions';
 import { NgForm } from '@angular/forms';
+import { interfaceEmployee } from './employeeInterface'
+import { EmployeeService } from './employee.service'
 
 @Component({
     selector: 'my-employee',
     templateUrl: 'employee.component.html',
-    styleUrls : ['employee.component.less']
+    styleUrls : ['employee.component.less'],
+    providers:[EmployeeService]
 })
 
 export class EmployeeComponent {
-    fullname: string = "Laxmi";
-    employeeList : any
+
+    employeeList : interfaceEmployee[];
     employeeCountSelectedRadioButton :String = 'all';
 
-    constructor() {
-        this.employeeList =
-        [{ Name: "laxmi", age: "28", height: '160cm' ,gender : 'female'},
-        { Name: "Ashish", age: "30", height: "170cm" ,gender : 'male'},
-        { Name: "Anmol", age: "22", height: "165cm",gender : 'male' },
-        { Name: "Kamta", age: "58", height: "168cm" ,gender : 'male'}]
+    constructor(private _employeeService:EmployeeService) {
+        this.employeeList= this._employeeService.getEmployees();
     }
     
     getTotalEmployeeCount():number{
-        return this.employeeList.length
+        return this.employeeList.length;
     }
 
     getTotalMaleEmployeeCount():number{

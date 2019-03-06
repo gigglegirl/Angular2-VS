@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { employeeTitle} from './employee/employeeTitle.pipe';
 import { employeeCountComponent } from './child-component/employee-count.component'
+import { simpleComponent } from './others/simpleComponent.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
     employeeTitle,
-    employeeCountComponent
+    employeeCountComponent,simpleComponent
   ],
   imports: [
     BrowserModule,
