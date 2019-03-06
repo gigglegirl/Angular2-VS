@@ -12,14 +12,14 @@ import { EmployeeService } from './employee.service'
 
 export class EmployeeComponent {
 
-    employeeList : interfaceEmployee[];
+    employeeList : interfaceEmployee;
     employeeCountSelectedRadioButton :String = 'all';
 
     constructor(private _employeeService:EmployeeService) {
         this.employeeList= this._employeeService.getEmployees();
     }
     
-    getTotalEmployeeCount():number{
+    getTotalEmployeeCount(){
         return this.employeeList.length;
     }
 

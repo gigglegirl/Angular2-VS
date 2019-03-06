@@ -3,9 +3,8 @@ import { interfaceEmployee } from './employeeInterface'
 
 @Injectable()
 export class EmployeeService {
-   getEmployees(): interfaceEmployee[] {
-    return 
-    [
+   getEmployees(): any {
+    return [
         { Name: "laxmi", age: "28", height: '160cm' ,gender : 'female'},
         { Name: "Ashish", age: "30", height: "170cm" ,gender : 'male'},
         { Name: "Anmol", age: "22", height: "165cm",gender : 'male' },
