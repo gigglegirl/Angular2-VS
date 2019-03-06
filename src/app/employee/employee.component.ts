@@ -12,12 +12,10 @@ import { EmployeeService } from './employee.service'
 
 export class EmployeeComponent implements OnInit{
 
-    employeeList : interfaceEmployee;
+    employeeList :interfaceEmployee[];
     employeeCountSelectedRadioButton :String = 'all';
 
-    constructor(private _employeeService:EmployeeService) {
-        
-    }
+    constructor(private _employeeService:EmployeeService) {}
     ngOnInit(){
         this.employeeList= this._employeeService.getEmployees();
     }

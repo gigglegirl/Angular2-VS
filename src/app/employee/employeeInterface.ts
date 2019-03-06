@@ -1,4 +1,4 @@
-export class interfaceEmployee extends Array{
+export interface interfaceEmployee {
     Name: string;
     age: string;
     gender: string;
