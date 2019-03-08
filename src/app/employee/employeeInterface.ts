@@ -5,9 +5,7 @@ export interface interfaceEmployee {
     height: string;
 }
 
-
-
-export class students {
+export class students implements interfaceEmployee{
     public Name: string;
     public age: string;
     public gender: string;
