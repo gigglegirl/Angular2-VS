@@ -6,19 +6,29 @@ import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { employeeTitle} from './employee/employeeTitle.pipe';
 import { employeeCountComponent } from './child-component/employee-count.component';
-import { simpleComponent } from './others/simpleComponent.component';
+import { simpleComponent } from './others/simpleComponent.component'
+import { RouterModule, Routes } from '@angular/router';
+import { homeComponent } from './home/homeComponent.component'
 
+const appRoutes : Routes = [
+  {path : 'home', component:homeComponent },
+  {path : 'employee', component:EmployeeComponent },
+  {path : "**" , component :employeeCountComponent}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
     employeeTitle,
-    employeeCountComponent,simpleComponent
+    employeeCountComponent,
+    simpleComponent,
+    homeComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
