@@ -13,7 +13,7 @@ import { homeComponent } from './home/homeComponent.component'
 const appRoutes : Routes = [
   {path : 'home', component:homeComponent },
   {path : 'employee', component:EmployeeComponent },
-  {path : "**" , component :employeeCountComponent}
+  {path : "**" , component :homeComponent}
 ]
 
 @NgModule({
