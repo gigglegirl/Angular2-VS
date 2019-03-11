@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { homeComponent } from './home/homeComponent.component';
-import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeComponent } from './employee/employee-component/employee.component';
 import { PageNotFoundComponent } from './others/pageNotFoundComponent.component';
-import { CreateEmployeeComponent } from './employee/create-employee.component'
-import { ViewDetailComponent } from './employee/view-detail.component';
+import { CreateEmployeeComponent } from './employee/create-component/create-employee.component'
+import { ViewDetailComponent } from './employee/view-detail-component/view-detail.component';
 
 
 const appRoutes : Routes = [
