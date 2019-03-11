@@ -1,20 +1,20 @@
-export interface interfaceEmployee {
-    Name: string;
-    age: string;
+export interface IEmployee {
+    first_name: string;
+    pan_no: string;
+    email: string;
     gender: string;
-    height: string;
 }
 
-export class students implements interfaceEmployee{
-    public Name: string;
-    public age: string;
+/* export class students implements IEmployee{
+    public first_name: string;
+    public pan_no: string;
+    public email: string;
     public gender: string;
-    public height: string;
 
-    constructor(Name: string, age: string, gender: string, height: string) {
-        this.Name = Name;
-        this.age = age;
+    constructor(name: string, pan: string, email: string, gender: string) {
+        this.first_name = name;
+        this.pan_no = pan;
         this.gender = gender;
-        this.height = height;
+        this.email = email;
     }
-}
+} */

@@ -4,33 +4,26 @@
  [female] = 'getTotalFemaleEmployeeCount()'
  (radioButtonSelectionChangingEvent)= "onEmployeeCountRadioSelectedChange($event)"></employee-count>
 <br><br>
+<button class="btn btn-primary">Bootstrap Styles Button</button>
 <table>
   <thead>
     <th>Name</th>
-    <th>age</th>
-    <th>height</th>
+    <th>pan_no</th>
+    <th>email</th>
     <th>gender</th>
   </thead>
   <tbody>
     <ng-container *ngFor="let data of employeeList" >
-
     <tr *ngIf = "employeeCountSelectedRadioButton == 'all' || 
     employeeCountSelectedRadioButton == data.gender ">
-      <td>{{data.Name | uppercase | addTitle:data.gender}}</td>
-      <td>{{data.age}}</td>
-      <td>{{data.height}}</td>
+      <td>{{data.first_name | uppercase | addTitle:data.gender}}</td>
+      <td>{{data.pan_no}}</td>
+      <td>{{data.email}}</td>
       <td>{{data.gender}}</td>
     </tr>
   </ng-container>
   </tbody>
 
 </table>
-<form #f="ngForm" (click)="onSubmit(f)">
-  <input type="text" [(ngModel)]="fullname" name="fullname">
-  <input type="text" [(ngModel)]="email" name="email">
-  <input type="text" [(ngModel)]="phone_no" name="phone_no">
-  <input type="text" [(ngModel)]="address" name="address">
-  <button type="submit">submit</button>
-</form>
 <br>
 

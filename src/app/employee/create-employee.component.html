@@ -1,0 +1,22 @@
+<form [formGroup] = "employeeForm" (ngSubmit) = "onSubmit()">
+  <div>
+    <div class="row">Create Employee</div>
+    <div><span> Name</span><input type="text"  
+       formControlName = "first_name"></div>
+    <div><span> Email</span><input type="text" 
+      formControlName = "email"></div>
+    <div><span><button type="submit">Submit</button></span></div>
+  </div>
+</form>
+<!-- 
+  //for Template Driven Forms 
+  <form #employeeForm = "ngForm" (ngSubmit) = 'saveEmployee(employeeForm)'>
+  <div>
+    <div class="row">Create Employee</div>
+    <div><span> Name</span><input type="text" name="fn" [(ngModel)]= 'first_name'></div>
+    <div><span> Email</span><input type="text" name="mailaddress" [(ngModel)]= 'email'></div>
+    <div><span><button type="submit">Submit</button></span></div>
+  </div>
+</form>
+
+{{employeeForm.value | json}} -->
