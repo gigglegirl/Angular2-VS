@@ -4,12 +4,15 @@
  (radioButtonSelectionChangingEvent)= "onEmployeeCountRadioSelectedChange($event)">
 </employee-count>
 <br><br>
-<table>
+
+<table class="table table-bordered">
   <thead>
-    <th>Name</th>
-    <th>pan_no</th>
-    <th>email</th>
-    <th>gender</th>
+    <tr>
+        <th>Name</th>
+        <th>pan_no</th>
+        <th>email</th>
+        <th>gender</th>
+  </tr>
   </thead>
   <tbody>
     <ng-container *ngFor="let data of employeeList" >
