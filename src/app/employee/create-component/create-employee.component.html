@@ -1,10 +1,12 @@
-<form [formGroup] = "employeeForm" (ngSubmit) = "onSubmit()">
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
   <div>
     <div class="row">Create Employee</div>
-    <div><span> Name</span><input type="text"  
-       formControlName = "first_name"></div>
-    <div><span> Email</span><input type="text" 
-      formControlName = "email"></div>
+    <div><span> First Name</span><input type="text" formControlName="first_name"></div>
+    <div><span> Email</span><input type="text" formControlName="email"></div>
+    <div><span> Pan number </span><input type="text" formControlName="pan_no"></div>
+    <div><span> Mobile </span><input type="text" formControlName="mobile"></div>
+    <div><span> Last Name </span><input type="text" formControlName="last_name"></div>
+    <div><span> Gender </span><input type="text" formControlName="gender"></div>
     <div><span><button type="submit">Submit</button></span></div>
   </div>
 </form>

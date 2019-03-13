@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-detail',
@@ -8,11 +8,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ViewDetailComponent implements OnInit {
   pan_no:string
-  constructor(private _routeParameter : ActivatedRoute) { }
+  constructor(private _activatedRoutes : ActivatedRoute , private _router:Router) { }
 
   ngOnInit() {
-    this.pan_no = this._routeParameter.snapshot.params['pan_no'];
+    this.pan_no = this._activatedRoutes.snapshot.params['pan_no'];
     
+  }
+
+  completeList():void{
+    this._router.navigate(['/employee'])
   }
 
 

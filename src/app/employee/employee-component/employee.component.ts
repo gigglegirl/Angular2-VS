@@ -10,12 +10,13 @@ import { retry , retryWhen , delay ,take, concatMap} from 'rxjs/operators';
     styleUrls : ['employee.component.less']
 })
 
-export class EmployeeComponent implements OnInit{
+export class EmployeeComponent implements OnInit {
 
     employeeList :IEmployee[];
     employeeCountSelectedRadioButton :String = 'all';
 
     constructor(private _employeeService:DataService) {}
+
     ngOnInit(){
          this._employeeService.getEmployees().pipe( retryWhen( errors => errors.pipe(delay(5000) ,take(2) )) )
          .subscribe((employeeData) => {
@@ -41,7 +42,13 @@ export class EmployeeComponent implements OnInit{
     
     onEmployeeCountRadioSelectedChange(selectedValue:String):void{
       this.employeeCountSelectedRadioButton = selectedValue;
+      this.genericFunc<number>(0);
     }
 
+    genericFunc<T>(args:T):T {
+        return args;
+    }
+
+     
 
 }
