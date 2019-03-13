@@ -15,7 +15,7 @@
     <ng-container *ngFor="let data of employeeList" >
     <tr *ngIf = "employeeCountSelectedRadioButton == 'all' || 
     employeeCountSelectedRadioButton == data.gender ">
-      <td>{{data.first_name | uppercase | addTitle:data.gender}}</td>
+      <td><a [routerLink] = "['/employee' , data.pan_no]">{{data.first_name | uppercase | addTitle:data.gender}}</a></td>
       <td>{{data.pan_no}}</td>
       <td>{{data.email}}</td>
       <td>{{data.gender}}</td>
