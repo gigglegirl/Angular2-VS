@@ -14,9 +14,11 @@ const appRoutes : Routes = [
   {path : 'employee/:pan_no', component:ViewDetailComponent },
   {path : 'create-employee' , component : CreateEmployeeComponent},
   {path : 'hr' , loadChildren : './feature-modules/hr.module#HrModule'},
-  {path : '' , redirectTo:'home', pathMatch :"full"},
+  {path : '' , redirectTo:'home', pathMatch :'full'},
   {path : "**" , component :PageNotFoundComponent}
 ]
+
+
 
 @NgModule({
   imports: [
