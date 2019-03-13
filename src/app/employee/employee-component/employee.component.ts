@@ -1,6 +1,6 @@
 import { Component ,OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { IEmployee } from '../employeeInterface'
+import { IEmployee } from '../employee.Interface'
 import { DataService } from '../data.service';
 import { retry , retryWhen , delay ,take, concatMap} from 'rxjs/operators';
 
