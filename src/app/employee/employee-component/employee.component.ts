@@ -3,17 +3,24 @@ import { NgForm } from '@angular/forms';
 import { IEmployee } from '../employee.Interface'
 import { DataService } from '../data.service';
 import { retry , retryWhen , delay ,take, concatMap} from 'rxjs/operators';
+import { List } from 'immutable';
 
+
+export interface Command {
+    action: 'add' | 'delete';
+    department: 'sales' | 'rnd';
+  }
 @Component({
     selector: 'my-employee',
     templateUrl: 'employee.component.html',
     styleUrls : ['employee.component.less']
 })
+export class EmployeeComponent implements OnInit{
 
-export class EmployeeComponent implements OnInit {
-
-    employeeList :IEmployee[];
+    employeeList : IEmployee[];
     employeeCountSelectedRadioButton :String = 'all';
+   
+
 
     constructor(private _employeeService:DataService) {}
 
