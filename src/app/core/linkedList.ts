@@ -11,6 +11,14 @@ class Node {
     }
 }
 
+
+
+export class addMe<T> {
+    add(item:T){
+        console.log(item);
+    }
+}
+
 // @Injectable({
 //     providedIn:'root'
 // })

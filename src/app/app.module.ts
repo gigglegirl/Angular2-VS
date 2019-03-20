@@ -4,16 +4,16 @@ import { FormsModule , ReactiveFormsModule} from '@angular/forms'
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { EmployeeComponent } from './employee/employee-component/employee.component';
-import { employeeTitle} from './employee/employeeTitle.pipe';
+import { EmployeeComponent } from './views/employee/employee-component/employee.component';
+import { employeeTitle} from './views/employee/employeeTitle.pipe';
 import { employeeCountComponent } from './child-component/employee-count.component';
-import { simpleComponent } from './others/simpleComponent.component'
-import { homeComponent } from './home/homeComponent.component'
-import { DataService } from './employee/data.service';
-import { PageNotFoundComponent } from './others/pageNotFoundComponent.component';
+import { simpleComponent } from './views/others/simpleComponent.component'
+import { homeComponent } from './views/home/homeComponent.component'
+import { DataService } from './views/employee/data.service';
+import { PageNotFoundComponent } from './views/others/pageNotFoundComponent.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CreateEmployeeComponent } from './employee/create-component/create-employee.component';
-import { ViewDetailComponent } from './employee/view-detail-component/view-detail.component'
+import { CreateEmployeeComponent } from './views/employee/create-component/create-employee.component';
+import { ViewDetailComponent } from './views/employee/view-detail-component/view-detail.component'
 
 @NgModule({
   declarations: [
@@ -21,11 +21,11 @@ import { ViewDetailComponent } from './employee/view-detail-component/view-detai
     EmployeeComponent,
     employeeTitle,
     employeeCountComponent,
-    simpleComponent,
     homeComponent,
     PageNotFoundComponent,
     CreateEmployeeComponent,
-    ViewDetailComponent
+    ViewDetailComponent,
+    simpleComponent,
   ],
   imports: [
     BrowserModule,

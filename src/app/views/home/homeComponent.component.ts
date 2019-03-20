@@ -1,8 +1,9 @@
 import {Component} from '@angular/core';
-import { LinkedList } from '../employee/core/linkedList'
+import { LinkedList } from '../../core/linkedList'
 @Component({
     selector : 'my-home',
-    templateUrl : 'homeComponent.component.html'
+    templateUrl : 'homeComponent.component.html',
+    styleUrls:['./homeComponent.component.scss']
 })
 export class homeComponent {
 name:any;

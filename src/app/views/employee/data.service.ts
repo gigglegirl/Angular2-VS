@@ -8,7 +8,7 @@ import { WebSocketSubject, webSocket } from 'rxjs/websocket';
 export interface Command {
     action: 'add' | 'delete';
     department: 'sales' | 'rnd';
-  }
+}
 @Injectable()
 export class DataService {
      private _commands$: WebSocketSubject<Command>;
@@ -47,6 +47,14 @@ export class DataService {
     get commands$() {
         return this._commands$;
     }
+
+    doubleAfter2Seconds(x) {
+        return new Promise(resolve => {
+          setTimeout(() => {
+            resolve(x * 2);
+          }, 2000);
+        });
+      }
 }
 
 
