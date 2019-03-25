@@ -1,17 +1,28 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <!-- <h1>Welcome to Angular 2!</h1> -->
+  <h1>Welcome to Angular 2!</h1>
 </div>
-<h2>{{pageHeader}} </h2>
+<div *ngIf="ab">{{pageHeader}}</div>
+<button (click)="add()">butto to add</button>
 <br/><br/>
-Your text : <input type="text" [(ngModel)] = 'userText'>
-<simple-component [simpleInput] = 'userText'></simple-component>
+<!-- Your text : <input type="text" [(ngModel)] = 'userText'> -->
+<!-- <simple-component [simpleInput] = 'userText'></simple-component> -->
  <button routerLink = "home" class="btn btn-primary">home</button> 
  <button routerLink = "employee" class="btn btn-primary">List Of Employees</button> 
  <button routerLink = "create-employee" class="btn btn-primary">create Employees</button> 
  <button routerLink = "hr" class="btn btn-primary">HR</button> 
  <router-outlet></router-outlet>
 
+--------------------
+<ng-template #loading>
+  <p>hello i m inside template ref-----{{ pageHeader }}</p>
+</ng-template>
 
+<ul *ngFor = "let v of view">
+   <li #cmp (click)=add(v)>{{v}}</li>
+</ul>
 
+<div *appNgLoop="let item of view;index as i">
+{{item}}---Foo
+</div>
 

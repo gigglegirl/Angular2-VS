@@ -12,7 +12,7 @@ export class ViewDetailComponent implements OnInit {
 
   ngOnInit() {
     this.pan_no = this._activatedRoutes.snapshot.params['pan_no'];
-    
+    console.log(`shgdhsjg ${this.pan_no}`)
   }
 
   completeList():void{

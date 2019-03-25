@@ -14,7 +14,7 @@ import { PageNotFoundComponent } from './views/others/pageNotFoundComponent.comp
 import { AppRoutingModule } from './app-routing.module';
 import { CreateEmployeeComponent } from './views/employee/create-component/create-employee.component';
 import { ViewDetailComponent } from './views/employee/view-detail-component/view-detail.component'
-
+import { NgLoopDirective } from './core/directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +26,7 @@ import { ViewDetailComponent } from './views/employee/view-detail-component/view
     CreateEmployeeComponent,
     ViewDetailComponent,
     simpleComponent,
+    NgLoopDirective
   ],
   imports: [
     BrowserModule,
