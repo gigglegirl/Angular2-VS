@@ -11,6 +11,7 @@ message:any;
 myList:any;
 newLinkInstance:LinkedList;
 addtoheadprop:any;
+valueToGet:string;
 constructor(){ 
     this.newLinkInstance = new LinkedList();
 }

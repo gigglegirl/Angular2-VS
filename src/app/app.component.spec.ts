@@ -31,10 +31,14 @@ describe('AppComponent', () => {
 
   it('add function', async(() => {
     comp.add("ashish");
-    comp.ngOnInit();
+    
+    comp.ngAfterViewInit();
     //expect(dataService).toBeTruthy();
     //const fixture = TestBed.createComponent(AppComponent);
     //const app = fixture.debugElement.componentInstance;
     //expect(app).toBeTruthy();
   }));
+  it('init function call', async(() => {
+    comp.ngOnInit();
+  }))
 });

@@ -3,7 +3,7 @@
   <h1>Welcome to Angular 2!</h1>
 </div>
 <div *ngIf="ab">{{pageHeader}}</div>
-<button (click)="add()">butto to add</button>
+<button (click)="add('ashish')">butto to add</button>
 <br/><br/>
 <!-- Your text : <input type="text" [(ngModel)] = 'userText'> -->
 <!-- <simple-component [simpleInput] = 'userText'></simple-component> -->
@@ -14,15 +14,18 @@
  <router-outlet></router-outlet>
 
 --------------------
-<ng-template #loading>
+<ng-template #laxmi>
   <p>hello i m inside template ref-----{{ pageHeader }}</p>
 </ng-template>
 
-<ul *ngFor = "let v of view">
+<!-- <ul *ngFor = "let v of view">
    <li #cmp (click)=add(v)>{{v}}</li>
-</ul>
+</ul> -->
 
 <div *appNgLoop="let item of view;index as i">
-{{item}}---Foo
+{{item}}---Foo===={{i}}
 </div>
-
+<span #loading> Hello madam</span>
+<!-- <ng-template [ngIf]="ab">
+  asahsiahsi at 
+</ng-template> -->

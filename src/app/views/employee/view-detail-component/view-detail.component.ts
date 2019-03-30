@@ -3,8 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-detail',
-  templateUrl: './view-detail.component.html',
-  styleUrls: ['./view-detail.component.less']
+  templateUrl: './view-detail.component.html'
 })
 export class ViewDetailComponent implements OnInit {
   pan_no:string
